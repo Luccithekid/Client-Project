@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #bd632f;
+    --secondary-color: #d8973c;
+    --neutral-color: #D8C99b;
+    --neutral-dark: #273e47;
+    --accent-color: #A4243B;
+    --wireframe-color: #333;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border: 2px solid var(--wireframe-color);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.row {
+    border: 1px dashed var(--wireframe-color);
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.col {
+    border: 1px dotted var(--wireframe-color);
+    padding: 10px;
+    min-height: 100px;
+}
+
+h1, h2, h3 {
+    color: var(--wireframe-color);
+    border-bottom: 1px solid var(--wireframe-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+p {
+    color: var(--wireframe-color);
+    border: 1px solid var(--wireframe-color);
+    padding: 10px;
+    background-color: rgba(0,0,0,0.05);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid var(--wireframe-color);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed var(--wireframe-color);
+    border-radius: 50%;
+}
+
+.circle:hover {
+    background-color: rgba(0,0,0,0.05);
+    transform: scale(1.1);
+}
